@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'dev.elephantcode'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = '11'
 
 configurations {
@@ -29,3 +29,5 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jar.archiveName("${project.name}.jar")
