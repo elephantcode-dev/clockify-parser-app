@@ -1,0 +1,10 @@
+clockify:
+  api-key:
+  base-path: https://api.clockify.me/api/v1
+  time-entries-path: ${clockify.base-path}/workspaces/{workspace}/user/{user-id}/time-entries
+  user-path: ${clockify.base-path}/user
+chabre:
+  name:
+range:
+#  from: 2021-10-01
+#  to: 2021-10-31

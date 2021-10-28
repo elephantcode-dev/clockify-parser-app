@@ -30,4 +30,10 @@ test {
     useJUnitPlatform()
 }
 
-jar.archiveName("${project.name}.jar")
+bootJar {
+    archiveName("${project.name}.jar")
+}
+
+jar {
+    enabled(false)
+}
