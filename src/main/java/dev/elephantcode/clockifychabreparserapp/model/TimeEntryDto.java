@@ -12,4 +12,5 @@ public class TimeEntryDto {
     LocalDateTime date;
     Duration duration;
     String description;
+    String name;
 }

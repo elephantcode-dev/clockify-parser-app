@@ -10,6 +10,5 @@ import org.springframework.context.annotation.Configuration;
 class ChabreConfig {
 
     private String consoleDelimiter;
-    private String name;
 
 }

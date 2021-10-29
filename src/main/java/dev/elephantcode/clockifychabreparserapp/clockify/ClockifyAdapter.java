@@ -37,7 +37,7 @@ public class ClockifyAdapter {
                     .getForEntity(uri, TimeEntryResponse[].class)
                     .getBody())
             .map(Arrays::asList)
-            .map(this::toDto)
+            .map(entries -> toDto(entries, getUserData().getName()))
             .orElse(Collections.emptyList());
     }
 
@@ -47,12 +47,13 @@ public class ClockifyAdapter {
             .getBody();
     }
 
-    private List<TimeEntryDto> toDto(List<TimeEntryResponse> timeEntryResponses) {
+    private List<TimeEntryDto> toDto(List<TimeEntryResponse> timeEntryResponses, String userName) {
         return timeEntryResponses.stream()
             .map(res -> TimeEntryDto.builder()
                 .date(res.getTimeEntryInterval().getStart())
                 .duration(res.getTimeEntryInterval().getDuration())
                 .description(res.getDescription())
+                .name(userName)
                 .build())
             .collect(Collectors.toList());
 

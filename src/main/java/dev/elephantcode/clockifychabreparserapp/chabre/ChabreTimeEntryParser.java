@@ -21,7 +21,7 @@ public class ChabreTimeEntryParser implements TimeEntryMapper {
         return TEMPLATE
             .replace("{date}", line.getDate().format(DateTimeFormatter.ISO_DATE))
             .replace("{delimiter}", chabreConfig.getConsoleDelimiter())
-            .replace("{name}", chabreConfig.getName())
+            .replace("{name}", line.getName())
             .replace("{duration}", getDuration(line)).replace(".", ",")
             .replace("{description}", line.getDescription());
     }

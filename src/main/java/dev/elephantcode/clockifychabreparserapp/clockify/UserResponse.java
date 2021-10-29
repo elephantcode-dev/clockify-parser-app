@@ -11,6 +11,8 @@ class UserResponse {
     private String workspace;
     @JsonProperty("id")
     private String id;
+    @JsonProperty("name")
+    private String name;
 
     Map<String, Object> toMap() {
         return Map.of(
