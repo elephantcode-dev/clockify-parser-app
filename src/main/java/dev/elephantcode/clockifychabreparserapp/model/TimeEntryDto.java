@@ -1,7 +1,7 @@
 package dev.elephantcode.clockifychabreparserapp.model;
 
 import java.time.Duration;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import lombok.Builder;
 import lombok.Value;
 
@@ -9,7 +9,7 @@ import lombok.Value;
 @Builder
 public class TimeEntryDto {
 
-    LocalDate date;
+    LocalDateTime date;
     Duration duration;
     String description;
 }

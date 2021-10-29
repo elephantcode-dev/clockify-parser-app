@@ -50,7 +50,7 @@ public class ClockifyAdapter {
     private List<TimeEntryDto> toDto(List<TimeEntryResponse> timeEntryResponses) {
         return timeEntryResponses.stream()
             .map(res -> TimeEntryDto.builder()
-                .date(res.getTimeEntryInterval().getStart().toLocalDate())
+                .date(res.getTimeEntryInterval().getStart())
                 .duration(res.getTimeEntryInterval().getDuration())
                 .description(res.getDescription())
                 .build())
