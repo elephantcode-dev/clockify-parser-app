@@ -27,6 +27,6 @@ public class ChabreTimeEntryParser implements TimeEntryMapper {
     }
 
     private String getDuration(TimeEntryDto entry) {
-        return BigDecimal.valueOf(entry.getDuration().toMinutes()).divide(BigDecimal.valueOf(60), 1, RoundingMode.UNNECESSARY).toString();
+        return BigDecimal.valueOf(entry.getDuration().toMinutes()).divide(BigDecimal.valueOf(60), 2, RoundingMode.HALF_UP).toString();
     }
 }
